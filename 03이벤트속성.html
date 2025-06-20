@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = 'container' style="background-color: aquamarine;"> <!-- 부모 요소  -->
+        <button id="btn">테스트 버튼</button>
+        <button>테스트 버튼A</button>
+        <button>테스트 버튼B</button>
+        <hr>
+        <input id="url" placeholder="url 입력하세요.">
+    </div>
+    <script>
+        // 이벤트는 자식요소 -> 부모요소로 전파 됩니다.
+        // 자식요소의 이벤트 처리를 부모가 할 수 있습니다.
+        document.getElementById('container').addEventListener('click', function(event){
+            console.log(event.target.tagName)
+            if(event.target.tagName == 'BUTTON')
+                alert('자식 요소 버튼이 눌렸습니다.' + event.target.textContent)
+            if(event.target.tagName == 'INPUT')
+                alert('자식 요소 인풋이 눌렸습니다.')
+            else
+                alert('자식 요소 HR이 눌렸습니다.')
+
+
+
+        })
+
+
+        // document.getElementById('url').addEventListener('keydown', function(event){
+        //     console.log(event)
+        // })
+
+        // const btn = document.getElementById('btn')
+        // btn.addEventListener('click',function(event){
+        //     // 이벤트 정보를 event 변수에 저장.(변수명은 임의로 가능)
+        //     console.log(event)
+        // })
+    </script>
+</body>
+</html>
