@@ -48,9 +48,12 @@
     <button id="naverBtn">http://www.naver.com</button>
     <script>
         const naverBtn = document.getElementById('naverBtn')
+        // id='naverBtn' 요소에 '클릭'이벤트가 발생할 때 처리할 함수 등록
             naverBtn.addEventListener('click',function(){
-                window.open(naverBtn.textContent)
+                window.open(naverBtn.textContent, '_blank')
             })
+        // textContent 속성 : 시작태그와 종료 태그 사이의 텍스트
+        // innerHTML 속성 :                              요소(태그가 포함) ??   
             
     </script>
 
