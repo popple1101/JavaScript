@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    간단 테스트 버튼 : <button id="btn1">ON</button>
+    <hr>
+    <!-- 이미지 자체 속성 width -->
+    <img src="images/pic_bulboff.gif" alt="OFF" width="70px"
+    style="cursor: pointer;"> 
+    isOn 변수 활용 버튼 : <button id="btn2">OFF</button>
+    <!-- 버튼 클릭할 때 마다 'ON', 'OFF' 토글(toggle) -->
+
+    <script>
+        const press2 = document.getElementById('btn2')
+        // 토글 기능을 변수를 이용해서 제어
+
+        let isOn = false // true('ON'), false('OFF')
+        let btnText 
+        const bulbOFF = "./images/pic_bulboff.gif"
+        const bulbON = "./images/pic_bulbon.gif"
+        let bulbImg = bulbOFF
+        const img =  document.querySelector('img') // 태그 이름을 선택자로 사용
+        
+        img.addEventListener('click', () => {
+            if (isOn) { // ON 상태 - isOn 이 true 일 때 실행
+                btnText = 'OFF'
+                bulbImg = bulbOFF
+            } else { // OFF 상태 - isOn 이 false 일 때 실행
+                btnText ='ON'
+                bulbImg = bulbON
+            }
+            // 버튼, 이미지 요소에 변수값을 적용
+            press2.textContent = btnText
+            img.src = bulbImg
+            // isOn 상태를 현재 상태와 반대(! 연산)로 변경
+            // t->f, f->t
+            isOn = !isOn
+        })
+
+        press2.addEventListener('click', () => {
+            if (isOn) { // ON 상태 - isOn 이 true 일 때 실행
+                btnText = 'OFF'
+                bulbImg = bulbOFF
+            } else { // OFF 상태 - isOn 이 false 일 때 실행
+                btnText ='ON'
+                bulbImg = bulbON
+            }
+            // 버튼, 이미지 요소에 변수값을 적용
+            press2.textContent = btnText
+            img.src = bulbImg
+            // isOn 상태를 현재 상태와 반대(! 연산)로 변경
+            // t->f, f->t
+            isOn = !isOn
+        })
+
+
+
+        const press1 = document.getElementById('btn1')
+        press1.addEventListener('click', () => {
+            if(press1.textContent === 'ON'){
+            press1.textContent = 'OFF'
+            }else {
+            press1.textContent = 'ON'
+        }
+    })
+        
+
+
+    </script>
+
+</body>
+</html>

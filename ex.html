@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습</title>
+    <style>
+        div#box {
+            width: 150px;
+            height: 150px;
+            background-color: white;
+            /* box 요소의 좌표(위치) 변경하기 위함. */
+            position : absolute;
+        }
+        div.main {
+            background-color: black;
+            /* 남은 영역을 '높이' 로 설정하는 계산 : css 함수 calc()
+               브라우저의 전체 높이 - nav 영역 높이 100px
+            */
+            height: calc(100vh - 100px);
+            /* 자식 요소를 수직,수평 방향 모두 중앙 배치 */
+            display: flex; justify-content: center; align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <button id ='startBtn'>시작</button>
+    <hr>
+    <div class="main" id ="m_box">
+        <div id="box"></div>
+    </div>
+    
+    <script>
+        // move 함수
+        const move = () => {
+            // 현재 박스 위치
+            const currentLeft = box.offsetLeft
+            const currentTop = box.offsetTop
+            // 현재 박스 크기
+            const currentWidth = box.offsetWidth
+            const currentHeight = box.offsetHeight
+            // main(배경) 크기
+            const parentWidth = parent.offsetWidth
+            const parentHeight = parent.offsetHeight
+
+            switch(e.key) {
+                case 'ArrowUp' : 
+                  console.log('위로 이동.')
+                  if(currentTop-10 > 100){
+                    box.style.top = (currentTop - 10) + 'px'
+                }
+                  break;
+                case 'ArrowDown' : 
+                  console.log('아래로 이동.')
+                  if(currentTop+currentHeight+10-100< parentHeight){
+                    box.style.top = (currentTop + 10) + 'px'
+                }
+                  break;
+                case 'ArrowRight' : 
+                  console.log('오른쪽으로 이동.')
+                  if(currentLeft+currentWidth+10 < parentWidth ){
+                    box.style.left = (currentLeft + 10) + 'px'
+                }
+                  break;
+                case 'ArrowLeft' : 
+                  console.log('왼쪽으로 이동.')
+                  if(currentLeft-10 > 0){
+                    box.style.left = (currentLeft - 10) + 'px'
+                }
+                  break;
+            }
+            
+
+        }
+
+        const box = document.getElementById('box')
+        const parent = document.getElementById('m_box') 
+
+        const press = document.getElementById('startBtn')
+
+        // 클릭 함수
+        press.addEventListener('click', () => {
+            if (press.textContent === '시작'){
+                press.textContent = '정지'
+                
+            }
+            else
+                press.textContent = '시작'
+                document.body.addEventListener('keydown', move)
+        })
+
+    </script>
+</body>
+</html>
