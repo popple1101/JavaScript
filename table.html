@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <style>
+        table{
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
+        tr, td{
+            border: 1px solid red;
+        }
+        th {
+            color : white;
+            background-color: red;
+            text-align: center;
+            font-size: 10px;
+        }
+        td {
+            text-align: center;
+            font-size: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <table>
+        <tr id="time">
+            <th>TIME</th>
+            <td class="tm"></td>
+            <td class="tm"></td>
+            <td class="tm"></td>
+            <td class="tm"></td>
+            <td class="tm"></td>
+        </tr>
+        <tr id="todo">
+            <th>TODO</th>
+            <td class="to"></td>
+            <td class="to"></td>
+            <td class="to"></td>
+            <td class="to"></td>
+            <td class="to"></td>
+        </tr>
+    </table>
+    <script>
+        const time = ['09:00', '11:00', '12:30', '14:00', '16:45']
+        const todo = ['수업', '과제', '점심식사', '주간회의', '자료조사']
+
+        const timeTB = document.querySelectorAll('tr#time > td')
+        const todoTB = document.querySelectorAll('tr#todo > td')
+
+        for (let i = 0; i < timeTB.length; i++) {
+            timeTB[i].textContent = time[i]
+        }
+        for (let i = 0; i < todoTB.length; i++) {
+            todoTB[i].textContent = todo[i] 
+        }
+
+
+    </script>
+</body>
+</html>
