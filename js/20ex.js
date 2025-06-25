@@ -38,13 +38,9 @@ const schedule = [
 function printRow(item) {
     const tr = document.createElement('tr') // 실제로 보이는 테이블 행을 tr 변수에 저장
     for(let key in item) {
-        // console.log(key)
         const td = document.createElement('td') // 실제로 보이는 테이블 데이터를 td 변수에 저장
-        // console.log(td)
         td.textContent = item[key]
-        // console.log(item[key])
         tr.appendChild(td) // 데이터 넣는거 까먹음...
-        // console.log(tr.appendChild(td))
     }
     return tr
 }
@@ -59,11 +55,7 @@ document.addEventListener('DOMContentLoaded', function(){
     </tr>`
     root.appendChild(table)
     schedule.forEach(item => {
-        // console.log('----')
-        // console.log(item)
         const trResult = printRow(item)
-        // console.log(trResult)
         table.appendChild(trResult)  
-        // console.log(table.appendChild(trResult))
     })
 })
