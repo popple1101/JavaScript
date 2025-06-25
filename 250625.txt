@@ -1,0 +1,15 @@
+#250625
+
+함수 정의 : 
+    
+    function timeline(timeArr, todoArr, title) {
+        코드 생략
+    }
+
+함수 호출 : 
+    timeline(time, todo, '오늘') // 버튼1
+    timeline(time2, todo2, '내일') // 버튼1
+
+실제 데이터는 time, todo, time2, todo2 변수에 저장된 배열 입니다.
+
+함수 정의에 사용한 변수 timeArr, todoArr, title 는 호출할 때 값이 정해지는 형식 매개변수.
