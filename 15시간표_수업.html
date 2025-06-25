@@ -73,12 +73,13 @@
         const timeTB = document.getElementById('time') // tr 태그 중 id가 time인데 클래스가 td인것을 모두 고른다
         const todoTB = document.getElementById('todo')
         const title = document.getElementById('title')
-        title.textContent = '오늘 시간표'
         
         // 오늘 
         tod.addEventListener('click', ()=>{
             timeTB.innerHTML = '<th>TIME</th>'
             todoTB.innerHTML = '<th>TODO</th>'
+            title.textContent = '오늘 시간표'
+
             for(let t of time){
                 const td = document.createElement('td')
                 td.textContent = t

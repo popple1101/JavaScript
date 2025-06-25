@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <style>
+        table{
+            border: 1px solid red;
+            border-collapse: collapse;
+            width: 700px;
+            margin: 30px auto;
+            /* 가로 방향 여백을 알아서 자동 설정(양쪽 여백값 동일하게) 
+               table의 너비가 100% 보다 작을 때 가능
+            */
+        }
+
+        h3 {
+            text-align: center; 
+            margin: 30px auto
+        }
+        tr, td{
+            border: 1px solid red;
+        }
+        th {
+            color : white;
+            background-color: tomato;
+            width: 100px;
+        }
+        td {
+            text-align: center;
+            padding: 5px;
+        }
+        
+    </style>
+    <script src="./16ex.js" defer></script> 
+</head>
+<body>
+    <h3 id="title">오늘 시간표</h3>
+    <table>
+        <tr id="time">
+            <th>TIME</th>                                      
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+        </tr>
+        <!-- tbody : td 들을 그룹화하는 테이블 요소 -->
+        <tr id="todo">
+            <th>TODO</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+        </tr>
+    </table>
+    <button id="today">오늘 시간표</button>
+    <button id="tomorrow">내일 시간표</button>
+    
+</body>
+</html>
