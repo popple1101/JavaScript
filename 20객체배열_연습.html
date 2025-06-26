@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>객체 배열 시간표</title>
     <style>
         table{
             border: 1px solid red;
@@ -23,13 +23,26 @@
             text-align: center;
             padding: 5px;
         }
+        h3,button,input{
+            padding: 7px 12px;
+        }
     </style>
-    <script src="js/20ex.js" defer></script>
+    <script src="js/20ex.js"></script>
 </head>
 <body>
+    <!-- 참고 19번 html 없음. -->
     <div id="root">
+        <h3>오늘 시간표</h3>
+    </div>
+    <hr>
+    <div>
+        <label for="newTime">시간: </label>
+        <input type="time" id="newTime">
+        <label for="newTodo">할일: </label> <!--포커스-->
+        <input type="text" id="newTodo">
+        <button id="newBtn">새로운 스케줄 추가</button>
 
     </div>
-    <!-- 참고 19번 html 없음. -->
+
 </body>
 </html>
