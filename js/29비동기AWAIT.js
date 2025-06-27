@@ -1,4 +1,4 @@
-const REST_API_KEY = '1616deaa88644e4edc43b2b8a7fba919'
+const REST_API_KEY = 'ae63ae23770d87233ccf3dcb8bf41c78'
 const headers = {
   method: 'GET',
   headers: {
@@ -7,6 +7,9 @@ const headers = {
 }
 const query = '트와이스'
 const url = `https://dapi.kakao.com/v2/search/image?query=${query}&sort=recency`
+
+// 🔥비동기 함수의 처리를 기다려야 하는 경우를 테스트
+// result, result2 변수가 fetch 실행 결과를 받기 위한 예시
 
 let result
 // fetch 비동기 함수이므로 await로 실행완료까지 대기
@@ -47,3 +50,4 @@ loadData2().then(() => {
   console.log('result:', result.documents[0].image_url)
 })
 */
+
