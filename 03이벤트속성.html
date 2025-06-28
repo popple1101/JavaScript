@@ -20,7 +20,7 @@
             console.log(event.target.tagName)
             if(event.target.tagName == 'BUTTON')
                 alert('자식 요소 버튼이 눌렸습니다.' + event.target.textContent)
-            if(event.target.tagName == 'INPUT')
+            else if(event.target.tagName == 'INPUT')
                 alert('자식 요소 인풋이 눌렸습니다.')
             else
                 alert('자식 요소 HR이 눌렸습니다.')
