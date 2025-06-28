@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Table</title>
     <style>
-        table{
+        table {
             border: 1px solid red;
             border-collapse: collapse;
         }
-        tr, td{
+        tr,
+        td {
             border: 1px solid red;
         }
         th {
-            color : white;
+            color: white;
             background-color: red;
             text-align: center;
             font-size: 10px;
@@ -21,7 +23,6 @@
             text-align: center;
             font-size: 10px;
         }
-        
     </style>
 </head>
 <body>
@@ -49,18 +50,21 @@
         const todo = ['수업', '과제', '점심식사', '주간회의', '자료조사']
 
         // 실제 table에 들어갈 timeTB, todoTB 배열 선언
-        const timeTB = document.querySelectorAll('tr#time > td') // tr 태그 중 id가 time인데 클래스가 td인것을 모두 고른다
-        document.write(timeTB)
-        const todoTB = document.querySelectorAll('tr#todo > td')
+        const timeTB = document.querySelectorAll('tr#time > td.tm') // id가 time인 <tr> 안의 **직계 자식** <td> 요소들을 모두 선택
+        console.log(document.querySelectorAll('tr#time>td.to'))
+
+        const todoTB = document.querySelectorAll('.to')
+        
 
         for (let i = 0; i < timeTB.length; i++) {
             timeTB[i].textContent = time[i]
         }
         for (let i = 0; i < todoTB.length; i++) {
-            todoTB[i].textContent = todo[i] 
+            todoTB[i].textContent = todo[i]
         }
 
 
     </script>
 </body>
+
 </html>
