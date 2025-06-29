@@ -18,7 +18,7 @@
         const press2 = document.getElementById('btn2')
         // 토글 기능을 변수를 이용해서 제어
 
-        let isOn = false // true('ON'), false('OFF')
+        let isOn = false // true('ON'), false('OFF') 현재상태는 꺼져 있는 상태라서 false
         let btnText 
         const bulbOFF = "./images/pic_bulboff.gif"
         const bulbON = "./images/pic_bulbon.gif"
@@ -60,7 +60,7 @@
 
 
         const press1 = document.getElementById('btn1')
-        press1.addEventListener('click', () => {
+        press1.addEventListener('click', () => { // .addEventListener 는 눌리면 이렇게 해!
             if(press1.textContent === 'ON'){
             press1.textContent = 'OFF'
             }else {

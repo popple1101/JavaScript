@@ -7,10 +7,10 @@
 </head>
 <body>
     <script>
-        let width = 200
+        // let width = 200
 
         // 반복문으로 width의 초기값 200을 일정한 간격으로 반복 증가
-        // for(초기밧;조건식;증가 또는 감소)
+        // for(초기값;조건식;증가 또는 감소)
         for (width = 100; width < 400; width=width+50) {
             // 반복 실행해야할 명령문들
             document.write('width: ',width, '<br>')
@@ -18,10 +18,12 @@
             // 증가 또는 감소 명령실행 -> 조건식 검사 -> 참이면 16번~ 반복명령들 실행
             //                                          거짓이면 for 를 중단.
         }
-        // document.write('<hr>')
+        
+        document.write('<hr>')
+        // 실행 안하는 코드
         for(width=500;width<400;width+=50) { // width = width + 50 를 줄여서 (축약)
             document.write('width: ',width, '<br>')
-        }
+        } 
 
         // 문제 : 500,450,400,350,300 순서대로 출력
         document.write('<hr>')
